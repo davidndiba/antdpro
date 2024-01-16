@@ -1,5 +1,4 @@
-import { defineConfig } from '@umijs/max';
-
+import { defineConfig } from 'umi';
 export default defineConfig({
   antd: {},
   access: {},
@@ -7,29 +6,29 @@ export default defineConfig({
   initialState: {},
   request: {},
   layout: {
-    title: '@umijs/max',
+    title: 'D2S Data Exchange',
   },
   routes: [
     {
       path: '/',
-      redirect: '/home',
+      redirect: '/Servers',
     },
     {
-      name: '首页',
-      path: '/home',
-      component: './Home',
+      name: '',
+      path: '/servers',
+      component: './Servers',
     },
     {
-      name: '权限演示',
-      path: '/access',
-      component: './Access',
+      name: 'Exchange Sessions',
+      path: '/exchange-sessions',
+      component: './ExchangeSessions',
     },
     {
-      name: ' CRUD 示例',
-      path: '/table',
-      component: './Table',
+      name: 'Mapping',
+      path: '/mapping',
+      component: './Mapping',
     },
+   
   ],
   npmClient: 'yarn',
 });
-

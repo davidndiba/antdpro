@@ -1,1 +1,1 @@
-export const DEFAULT_NAME = 'Umi Max';
+export const DEFAULT_NAME = 'D2S Data Exchange';
