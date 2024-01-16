@@ -119,7 +119,7 @@ const Servers: React.FC = () => (
       color: '#2F286E', 
     }}
   >
-    1
+    1 Month
   </Card>
 </Col>
           
