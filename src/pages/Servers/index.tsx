@@ -71,11 +71,6 @@ const Servers: React.FC = () => (
         <h2 className='title' style={{ fontSize:'36px', fontFamily:'Inter',fontStyle:'normal',lineHeight:'44px',fontWeight:'400'}}>Servers</h2>
         <h3 className='sub-title' style={{fontFamily:'Inter',fontSize:'24px',fontStyle:'normal',lineHeight:'32px',color:'#A1A1A1'}}>DHIS2 Instances</h3>
         <Row gutter={16}>
-          {/* <Col span={8}>
-            <Card className='new' title="Total Servers" bordered={true} style={{fontFamily:'Inter',fontSize:'24px',fontStyle:'normal',lineHeight:'32px',fontWeight:'400',alignSelf:'stretch'}}>
-              5
-            </Card>
-          </Col> */}
           <Col span={8}>
   <Card
     className='new'
@@ -104,7 +99,7 @@ const Servers: React.FC = () => (
       fontStyle: 'normal',
       lineHeight: '32px',
       fontWeight: '400',
-      color: '#2F286E', // Set the color here
+      color: '#2F286E', 
     }}
   >
     2
@@ -124,7 +119,7 @@ const Servers: React.FC = () => (
       color: '#2F286E', 
     }}
   >
-    2
+    1
   </Card>
 </Col>
           
