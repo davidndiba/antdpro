@@ -85,7 +85,9 @@ const Servers: React.FC = () => (
       color: '#2F286E', 
     }}
   >
-    5
+    <h1 className='num-1' >
+      5
+    </h1>
   </Card>
 </Col>
 <Col span={8}>
@@ -102,7 +104,7 @@ const Servers: React.FC = () => (
       color: '#2F286E', 
     }}
   >
-    2
+    <h1  className='num-1'>2</h1>
   </Card>
 </Col>
 <Col span={8}>
@@ -119,10 +121,9 @@ const Servers: React.FC = () => (
       color: '#2F286E', 
     }}
   >
-    1 Month
+   <h1 className='num-2'>1 Month</h1>
   </Card>
-</Col>
-          
+</Col>    
         </Row>
         <Divider></Divider>
         <Mentions
