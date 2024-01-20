@@ -1,31 +1,10 @@
-// import React from 'react';
-// import { Layout, Card } from 'antd';
-// import { PageContainer } from '@ant-design/pro-layout';
-
-// const { Sider } = Layout;
-
-// const Dashboard: React.FC = () => {
-//   return (
-//     <PageContainer>
-//       <Layout> 
-//         <Layout.Content>
-//           <Card>
-            
-//           </Card>
-//         </Layout.Content>
-//       </Layout>
-//     </PageContainer>
-//   );
-// };
-
-// export default Dashboard;
-// src/pages/Dashboard.tsx
 import React from 'react';
-import { Layout, Card, Row, Col, Button, Input, Table } from 'antd';
+import { Layout, Card,Space, Row, Col, Button, Input, Table } from 'antd';
 import {  Typography,  Divider } from 'antd';
 import { PageContainer } from '@ant-design/pro-layout';
 import MappingContainer from '../../components/Guide/MappingContainer';
-
+import {  BellTwoTone } from '@ant-design/icons';
+import { Avatar } from "antd";
 const { Header, Content, Footer } = Layout;
 const { Text } = Typography;
 
@@ -75,6 +54,19 @@ const data: DataType[] = [
 const Dashboard: React.FC = () => (
   <PageContainer>
     <Layout>
+    <Header className='head' style={{ backgroundColor: 'white', padding: '0 16px', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+        <Text className="home" style={{ color: '#A1A1A1' }} type="secondary">
+          Home
+        </Text>
+
+        <Space className='icon'>
+          <BellTwoTone style={{ fontSize: '24px', color: '#fff' }} />
+          <Avatar src="https://joeschmoe.io/api/v1/random" />
+          <Text style={{ color: '#A1A1A1' }} type="secondary">
+            John Doe
+          </Text>
+        </Space>
+      </Header>
       <Layout.Content>
         <Card>
           <Row gutter={12}>
@@ -101,14 +93,25 @@ const Dashboard: React.FC = () => (
           </Row>
           <Card style={{ width: 300 }}>
             <p>Source Details</p>
-            {/* Add source details here */}
+            <p>Server name: DHIS2 Server 1</p>
+    <p>URL: http://...</p>
+    <p>Last Synced: 13th Jul,2023 13:00</p>
+    <p>Active: Yes</p>
+    <p>Data Exchange:935 Mb</p>
+    <p>Exchange Rate: 256 Mbps</p>
             <Divider />
             <p>Destination Details</p>
-            {/* Add destination details here */}
+            <p>Server name: DHIS2 Server 1</p>
+    <p>URL: http://...</p>
+    <p>Last Synced: 13th Jul,2023 13:00</p>
+    <p>Active: Yes</p>
+    <p>Data Exchange:935 Mb</p>
+    <p>Exchange Rate: 256 Mbps</p>
           </Card>
           <Card style={{ width: 300 }}>
             <p>Mapping Stats</p>
-            {/* Add mapping stats here */}
+            <p>Org Units Mapped - 95%</p>
+            <p>Dataset Mapped - 52%</p>
           </Card>
           <Row gutter={12}>
             <Col span={4}>
