@@ -11,10 +11,15 @@ export default defineConfig({
   routes: [
     {
       path: '/',
-      redirect: '/Servers',
+      redirect: '/Overview',
     },
     {
-      name: '',
+      name: 'Overview',
+      path: '/overview',
+      component: './Overview',
+    },
+    {
+      name: 'Servers',
       path: '/servers',
       component: './Servers',
     },
