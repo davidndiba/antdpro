@@ -3,7 +3,7 @@ import { Layout, Typography, Space, Card, Row, Col, Progress, Table, Tag } from 
 import { PageContainer } from '@ant-design/pro-layout';
 import {  BellTwoTone } from '@ant-design/icons';
 import { Avatar } from "antd";
-
+import './index.less'
 const { Header, Footer, Content } = Layout;
 const { Text } = Typography;
 
@@ -130,22 +130,22 @@ const Overview: React.FC = () => (
         <h3 className='title_3'>Status Summary</h3>
         <Row gutter={12}>
         <Col span={6}>
-      <Card className="new" title="Servers" bordered={true}>
+      <Card className="new" title={<span className="card-title">Servers</span>}  bordered={true}>
         18
       </Card>
     </Col>
     <Col span={6}>
-      <Card className="new" title="Sessions" bordered={true}>
+      <Card className="new" title={<span className='card-title'>Sessions</span>} bordered={true}>
         4
       </Card>
     </Col>
     <Col span={6}>
-      <Card className="new" title="Mapped Servers" bordered={true}>
+      <Card className="new" title={<span className='card-title'>Mapped Servers</span>} bordered={true}>
         12
       </Card>
     </Col>
     <Col span={6}>
-      <Card className="new" title="Reporting APIs" bordered={true}>
+      <Card className="new" title={<span className='card-title'>Reporting API's</span>} bordered={true}>
        5
       </Card>
     </Col>
@@ -153,10 +153,10 @@ const Overview: React.FC = () => (
         <h3 className='title_3'></h3>
         <Row gutter={18}>
         <Col span={12}>
-      <Card title="Data Exchange Outcomes" bordered={true}/>
+      <Card title={<span className='card-title'>Data Exchange Outcomes</span>} bordered={true}/>
     </Col>
     <Col span={12}>
-    <Card title='Data Exchange Sessions' bordered= {false}>
+    <Card title={<span className='card-title'>Data Exchange Sessions</span>} bordered= {false}>
        Session A  <Progress percent={80} />
        Session B  <Progress percent={60} />
        Session C  <Progress percent={40} />
@@ -167,7 +167,7 @@ const Overview: React.FC = () => (
         <h3 className='title_3'>Performance</h3>
         <Row gutter={12}>
         <Col span={8}>
-      <Card className="new" title="Active Servers" bordered={true}>
+      <Card className="new" title={<span className='card-title'>Active Servers</span>} bordered={true}>
         6
         <h5 className='khis'>
         . KHIS - 257 Mbps        
@@ -176,7 +176,7 @@ const Overview: React.FC = () => (
       </Card>
     </Col>
     <Col span={8}>
-      <Card className="new" title="Data Mapping" bordered={true}>
+      <Card className="new" title={<span className='card-title'>Data Mapping</span>} bordered={true}>
         3,500
         <h5 className='khis'>
         .KHIS/DHIS-256
@@ -185,7 +185,7 @@ const Overview: React.FC = () => (
       </Card>
     </Col>
     <Col span={8}>
-      <Card className="new" title="Data Migrated" bordered={true}>
+      <Card className="new" title={<span className='card-title'>Data Migrated</span>} bordered={true}>
         1.4 Gb
         <h5 className='khis'>
         .KHIS Server-847 Mb

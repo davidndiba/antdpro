@@ -3,7 +3,7 @@ import { Layout, Typography, Space, Row, Col, Card, Mentions, Divider, Table } f
 import { PageContainer } from '@ant-design/pro-layout';
 import {  BellTwoTone } from '@ant-design/icons';
 import { Avatar } from "antd";
-
+import './index.less'
 const { Header, Footer, Content } = Layout;
 const { Text } = Typography;
 const { Column } = Table;

@@ -5,49 +5,71 @@ import { PageContainer } from '@ant-design/pro-layout';
 import MappingContainer from '../../components/Guide/MappingContainer';
 import {  BellTwoTone } from '@ant-design/icons';
 import { Avatar } from "antd";
+import './index.less'
 const { Header, Content, Footer } = Layout;
 const { Text } = Typography;
 
 interface DataType {
   key: React.Key;
-  name: string;
-  age: number;
-  address: string;
+  source: string;
+  destination: string;
+  map: string;
 }
 
 const columns: any = [
   {
-    title: 'Name',
-    dataIndex: 'name',
+    title: 'Source',
+    dataIndex: 'source',
+    render: (text: string) => (
+      <span style={{ backgroundColor: '#f0f0f0', fontWeight: 'bold', display: 'block' }}>{text}</span>
+    ),
   },
   {
-    title: 'Age',
-    dataIndex: 'age',
+    title: 'Destination',
+    dataIndex: 'destination',
+    render: (text: string) => (
+      <span style={{ backgroundColor: '#f0f0f0', fontWeight: 'bold', display: 'block' }}>{text}</span>
+    ),
   },
   {
-    title: 'Address',
-    dataIndex: 'address',
+    title: '',
+    dataIndex: 'map',
+    render: (text: string) => (
+      <span style={{ display: 'block' }}>{text}</span>
+    ),
   },
 ];
 
 const data: DataType[] = [
   {
     key: '1',
-    name: 'John Brown',
-    age: 32,
-    address: 'New York No. 1 Lake Park',
+    source: 'Org-unit 1 Server 1',
+    destination: 'Org-unit 1 Server 2',
+    map: 'Unmap',
   },
   {
     key: '2',
-    name: 'Jim Green',
-    age: 42,
-    address: 'London No. 1 Lake Park',
+    source: 'Org-unit 2 Server 1',
+    destination: 'Org-unit 2 Server 2',
+    map: 'Unmap',
   },
   {
     key: '3',
-    name: 'Joe Black',
-    age: 32,
-    address: 'Sydney No. 1 Lake Park',
+    source: 'Org-unit 3 Server 1',
+    destination: 'Org-unit 3 Server 2',
+    map: 'Unmap',
+  },
+  {
+    key: '4',
+    source: 'Org-unit 4 Server 1',
+    destination: 'Org-unit 4 Server 2',
+    map: 'Unmap',
+  },
+  {
+    key: '5',
+    source: 'Org-unit 5 Server 1',
+    destination: 'Org-unit 5 Server 2',
+    map: 'Unmap',
   },
 ];
 
@@ -71,42 +93,42 @@ const Dashboard: React.FC = () => (
         <Card>
           <Row gutter={12}>
             <Col span={6}>
-              <Card title="Mapped Servers Pairs" bordered={true}>
-                4 +2% increase from last month
+              <Card className='new' title={<span className='card-title'>Mapped Servers Pairs</span>} bordered={true}>
+                4 <span className='colored'>+2%</span>increase from last month
               </Card>
             </Col>
             <Col span={6}>
-              <Card title="Mapped Org-Units" bordered={true}>
-                257 +2% increase from last month
+              <Card className='new' title={<span className='card-title'>Mapped Org-Units</span>} bordered={true}>
+                257 <span className='colored'>+2%</span> increase from last month
               </Card>
             </Col>
             <Col span={6}>
-              <Card title="Mapped Datasets" bordered={true}>
-                56 +2% increase from last month
+              <Card className='new' title={<span className='card-title'>Mapped Datasets</span>} bordered={true}>
+                56 <span className='colored'>+2%</span> increase from last month
               </Card>
             </Col>
             <Col span={6}>
-              <Card title="%Ge Mapping In Sessions" bordered={true}>
-                67% Mapped +2% increase from last month
+              <Card className='new' title={<span className='card-title'>%Ge Mapping In Sessions</span>} bordered={true}>
+                67% Mapped <span className='colored'>+2%</span> increase from last month
               </Card>
             </Col>
           </Row>
           <Card style={{ width: 300 }}>
             <p>Source Details</p>
             <p>Server name: DHIS2 Server 1</p>
-    <p>URL: http://...</p>
-    <p>Last Synced: 13th Jul,2023 13:00</p>
-    <p>Active: Yes</p>
-    <p>Data Exchange:935 Mb</p>
-    <p>Exchange Rate: 256 Mbps</p>
+            <p>URL: http://...</p>
+            <p>Last Synced: 13th Jul,2023 13:00</p>
+            <p>Active: Yes</p>
+            <p>Data Exchange:935 Mb</p>
+            <p>Exchange Rate: 256 Mbps</p>
             <Divider />
             <p>Destination Details</p>
             <p>Server name: DHIS2 Server 1</p>
-    <p>URL: http://...</p>
-    <p>Last Synced: 13th Jul,2023 13:00</p>
-    <p>Active: Yes</p>
-    <p>Data Exchange:935 Mb</p>
-    <p>Exchange Rate: 256 Mbps</p>
+            <p>URL: http://...</p>
+            <p>Last Synced: 13th Jul,2023 13:00</p>
+            <p>Active: Yes</p>
+            <p>Data Exchange:935 Mb</p>
+            <p>Exchange Rate: 256 Mbps</p>
           </Card>
           <Card style={{ width: 300 }}>
             <p>Mapping Stats</p>
